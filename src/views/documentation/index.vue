@@ -4,12 +4,12 @@
       class="document-btn"
       target="_blank"
       href="https://panjiachen.github.io/vue-element-admin-site/"
-    >Documentation</a>
+    >文档</a>
     <a
       class="document-btn"
       target="_blank"
       href="https://github.com/PanJiaChen/vue-element-admin/"
-    >Github Repository</a>
+    >Github 地址</a>
     <a
       class="document-btn"
       target="_blank"
