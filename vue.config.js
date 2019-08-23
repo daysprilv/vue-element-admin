@@ -49,20 +49,22 @@ module.exports = {
     },
     after: require('./mock/mock-server.js')
   },
-  configureWebpack: {
-    // provide the app's title in webpack's name field, so that
-    // it can be accessed in index.html to inject the correct title.
-    name: name,
-    resolve: {
-      alias: {
-        '@': resolve('src')
-      }
-    }
-  },
+  // configureWebpack: {
+  //   // provide the app's title in webpack's name field, so that
+  //   // it can be accessed in index.html to inject the correct title.
+  //   name: name,
+  //   resolve: {
+  //     alias: {
+  //       '@': resolve('src')
+  //     }
+  //   }
+  // },
   chainWebpack(config) {
     config.plugins.delete('preload') // TODO: need test
     config.plugins.delete('prefetch') // TODO: need test
 
+    config.resolve.alias
+      .set('@', resolve('src')) // key,value自行定义，比如.set('@@', resolve('src/components'))
     // set svg-sprite-loader
     config.module
       .rule('svg')
